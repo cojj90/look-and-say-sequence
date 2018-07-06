@@ -3,7 +3,7 @@ jobs:
     javascript:
       working_directory: "~/ci-build"
       docker:
-        - image: "circleci/node:10.6.0"
+        - image: "circleci/node:10.5.0"
       steps:
         - run:
             name: "Setup NPMRC"
