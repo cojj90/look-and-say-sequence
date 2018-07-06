@@ -11,21 +11,21 @@ function pureJavascriptMethod (n) {
 function lookNSay (inputSequence) {
   const inputSequenceArray = inputSequence.split('')
 
-  let current
+  let numberLookingAt
   let count = 0
   let look = []
-  inputSequenceArray.forEach((elem) => {
-    if (current == null) current = elem
-    if (current === elem) {
+  inputSequenceArray.forEach((numberFromSequence) => {
+    if (numberLookingAt == null) numberLookingAt = numberFromSequence
+    if (numberLookingAt === numberFromSequence) {
       count++
       return
     }
-    look.push({ number: current, count })
+    look.push({ number: numberLookingAt, count })
     // reset
-    current = elem
+    numberLookingAt = numberFromSequence
     count = 1
   })
-  look.push({ number: current, count })
+  look.push({ number: numberLookingAt, count })
 
   const say = (accumulator, numberToSay) => `${accumulator}${numberToSay.number}${numberToSay.count}`
   return look.reduce(say, '')
