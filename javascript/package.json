@@ -1,0 +1,20 @@
+{
+  "name": "look-and-say-sequence-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pkg-build",
+    "prepublish": "npm run build",
+    "postpublish": "git push --tags",
+    "flow": "pkg-flow",
+    "lint": "pkg-lint",
+    "test": "NODE_ENV=test_local pkg-test",
+    "coverage": "NODE_ENV=test_local pkg-coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@mishguru/package": "^4.3.1"
+  }
+}
