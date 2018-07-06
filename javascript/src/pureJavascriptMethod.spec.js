@@ -4,8 +4,12 @@ import { pureJavascriptMethod } from './pureJavascriptMethod'
 // 1 11 12 1121 122111 112213 12221131 1123123111 (from google)
 
 test('starting sequence must be greater than 0', (t) => {
-  t.throws(pureJavascriptMethod(0))
-  t.throws(pureJavascriptMethod(-1))
+  t.throws(()=>{
+    pureJavascriptMethod(0)
+  })
+  t.throws(()=>{
+    pureJavascriptMethod(-1)
+  })
 })
 
 test('test first 8 sequences', (t) => {
