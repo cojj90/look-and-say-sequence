@@ -9,12 +9,11 @@ jobs:
             name: "Setup NPMRC"
             command: "echo $NPMRC > ~/.npmrc"
         - checkout
-        - run: cd javascript
         - run:
             name: "NPM: Install dependencies"
-            command: "npm ci"
-        - run: npm lint
-        - run: npm test
+            command: "cd javascript && npm ci"
+        - run: cd javascript && npm lint
+        - run: cd javascript && npm test
 workflows:
   version: 2
   build_and_test:
