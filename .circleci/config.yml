@@ -12,8 +12,9 @@ jobs:
         - run:
             name: "NPM: Install dependencies"
             command: "cd javascript && npm ci"
-        - run: cd javascript && npm lint
-        - run: cd javascript && npm test
+        - run: cd javascript && npm run lint
+        - run: cd javascript && npm run flow
+        - run: cd javascript && npm run test
 workflows:
   version: 2
   build_and_test:
