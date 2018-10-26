@@ -15,6 +15,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@mishguru/package": "^4.3.1"
+    "@mishguru/package": "^4.18.0"
   }
 }
